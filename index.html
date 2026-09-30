@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francisco Javier Oliver Molina — Global Operations &amp; Travel</title>
+<meta name="description" content="Portfolio de Francisco Javier Oliver Molina: Global Operations & Incident Resolution en parques temáticos, hoteles y travel tech B2B.">
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --card2:#1c2430; --linea:#2d333b;
+    --texto:#e6edf3; --muted:#8b949e; --acento:#38bdf8; --verde:#3fb950;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--texto);line-height:1.65;min-height:100vh}
+  body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(rgba(139,148,158,.08) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;z-index:0}
+  a{color:var(--acento);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .contenedor{max-width:1040px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
+  .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .nav-logo{font-weight:700;letter-spacing:.5px}
+  .nav-logo .barra{color:var(--acento)}
+  .nav-links{display:flex;gap:20px;align-items:center;font-size:.88rem}
+  .nav-links a{color:var(--muted)} .nav-links a:hover{color:var(--texto);text-decoration:none}
+  .nav-lang{border:1px solid var(--linea);padding:4px 12px;border-radius:16px;color:var(--texto);font-size:.85rem}
+
+  header{padding:64px 0 40px;position:relative;z-index:1}
+  .hero{text-align:center}
+  .foto{width:124px;height:124px;border-radius:50%;object-fit:cover;border:2px solid var(--linea);box-shadow:0 0 0 4px var(--card2), 0 12px 36px rgba(0,0,0,.5)}
+  .hero h1{font-size:2.5rem;margin:18px 0 4px;letter-spacing:-.8px;font-weight:700}
+  .hero .titular{color:var(--muted);font-size:1.02rem;max-width:700px;margin:0 auto}
+  .hero .titular b{color:var(--acento);font-weight:600}
+  .hero .ubicacion{color:var(--muted);font-size:.9rem;margin-top:8px}
+  .hero-cta{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--acento);color:#041219!important;padding:11px 26px;border-radius:8px;font-weight:600;transition:.2s;font-size:.95rem}
+  .btn:hover{background:#7cd4fd;text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--texto)!important;border:1px solid var(--linea)}
+  .btn.ghost:hover{border-color:var(--acento);color:var(--acento)!important}
+  .etiquetas{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .etiqueta{background:var(--card);border:1px solid var(--linea);padding:5px 13px;border-radius:6px;font-size:.8rem;color:var(--muted)}
+  .etiqueta .pin{color:var(--acento)}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:10px;margin:40px auto 0;max-width:880px;overflow:hidden}
+  .stat{background:var(--card);padding:22px;text-align:center}
+  .stat .cifra{font-size:1.8rem;font-weight:700;color:var(--acento)}
+  .stat .etiq{font-size:.8rem;color:var(--muted)}
+
+  .manifiesto{margin:48px auto;max-width:880px;background:var(--card2);border:1px solid var(--linea);border-left:4px solid var(--acento);border-radius:10px;padding:30px 34px}
+  .manifiesto .etq{color:var(--acento);font-size:.75rem;text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:10px}
+  .manifiesto p{font-size:1.18rem;line-height:1.6}
+  .manifiesto a{font-weight:600}
+
+  section{padding:44px 0}
+  h2{font-size:1.6rem;margin-bottom:4px}
+  h2 .tag{color:var(--acento);font-family:"SFMono-Regular",Consolas,monospace;font-size:1rem;margin-right:8px}
+  .sub{color:var(--muted);font-size:.95rem;margin-bottom:24px}
+  .linea{width:44px;height:3px;background:var(--acento);border-radius:2px;margin-bottom:26px}
+
+  .sobre-mi p{margin-bottom:14px;font-size:1rem;color:#c9d1d9}
+  .sobre-mi ul{margin:0 0 14px 22px;color:#c9d1d9}
+  .sobre-mi li{margin-bottom:6px}
+  .sobre-mi strong{color:var(--texto)}
+  .cita{border-left:3px solid var(--acento);padding:14px 20px;background:var(--card);border-radius:0 8px 8px 0;font-style:italic;color:var(--muted);margin-top:10px}
+
+  .timeline{position:relative;padding-left:24px}
+  .timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--linea)}
+  .trabajo{position:relative;background:var(--card);border:1px solid var(--linea);border-radius:10px;padding:22px 24px;margin-bottom:16px}
+  .trabajo:hover{border-color:#3b4650}
+  .trabajo::before{content:"";position:absolute;left:-22px;top:27px;width:10px;height:10px;border-radius:50%;background:var(--acento);box-shadow:0 0 0 3px var(--bg)}
+  .trabajo h3{font-size:1.08rem}
+  .trabajo .empresa{color:var(--acento);font-weight:600;font-size:.92rem}
+  .trabajo .fechas{font-size:.82rem;color:var(--muted);margin:2px 0 12px;font-family:Consolas,monospace}
+  .trabajo ul{margin-left:20px;font-size:.92rem;color:#c9d1d9}
+  .trabajo li{margin-bottom:5px}
+  .actual{display:inline-block;background:rgba(63,185,80,.14);color:var(--verde);font-size:.7rem;font-weight:600;padding:2px 10px;border-radius:6px;margin-left:8px;vertical-align:middle;text-transform:uppercase;letter-spacing:.4px}
+
+  .filtros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .filtro{background:var(--card);border:1px solid var(--linea);border-radius:6px;padding:7px 15px;font-size:.83rem;cursor:pointer;transition:.2s;color:var(--muted)}
+  .filtro:hover{border-color:var(--acento);color:var(--texto)}
+  .filtro.activo{background:var(--acento);color:#041219;border-color:var(--acento);font-weight:600}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .cert{background:var(--card);border:1px solid var(--linea);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:6px;transition:.2s}
+  .cert:hover{border-color:var(--acento)}
+  .cert .fecha{font-size:.74rem;color:var(--acento);text-transform:uppercase;letter-spacing:.5px;font-family:Consolas,monospace}
+  .cert .nombre{font-weight:600;font-size:.93rem}
+  .cert .emisor{font-size:.83rem;color:var(--muted)}
+  .cert .id{font-size:.74rem;color:#59636e;font-family:Consolas,monospace}
+  .oculta{display:none}
+
+  .aptitudes{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+  .apt{background:var(--card);border:1px solid var(--linea);border-radius:6px;padding:8px 15px;font-size:.87rem;color:#c9d1d9}
+  .apt:hover{border-color:var(--acento)}
+  .idiomas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .idioma{background:var(--card);border:1px solid var(--linea);border-radius:10px;padding:20px;text-align:center}
+  .idioma .bandera{font-size:1.7rem}
+  .idioma .nombre{font-weight:600;margin-top:4px}
+  .idioma .nivel{font-size:.83rem;color:var(--muted)}
+
+  .contacto{background:var(--card2);border:1px solid var(--linea);border-radius:12px;padding:46px;text-align:center}
+  .contacto h2{font-size:1.9rem}
+  .contacto p{color:var(--muted);margin:4px 0 20px}
+
+  footer{border-top:1px solid var(--linea);text-align:center;padding:26px 0;font-size:.85rem;color:var(--muted);margin-top:30px}
+  footer a{color:var(--texto)}
+  @media(max-width:640px){
+    .hero h1{font-size:2rem}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .nav-links{gap:12px;font-size:.8rem}
+    .manifiesto{padding:22px 20px} .manifiesto p{font-size:1.06rem}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="contenedor nav-in">
+    <div class="nav-logo">fmolina<span class="barra mono">_</span></div>
+    <div class="nav-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#certificaciones">Certificaciones</a>
+      <a href="#contacto">Contacto</a>
+      <a class="nav-lang" href="index-en.html">🇬🇧 EN</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="contenedor hero">
+    <img class="foto" src="foto.jpg" alt="Francisco Javier Oliver Molina">
+    <h1>Francisco Javier Oliver Molina</h1>
+    <div class="titular"><b>Global Operations</b> | Incident &amp; Problem Resolution · Customer Service · Long-Term Provider Relationships | Theme Parks, Hotels &amp; Travel</div>
+    <div class="ubicacion">📍 Área metropolitana de Palma de Mallorca, España</div>
+    <div class="hero-cta">
+      <a class="btn" href="https://www.linkedin.com/in/francisco-javier-oliver-molina-a52ba5116/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="mailto:paco.oliver@outlook.es">paco.oliver@outlook.es</a>
+    </div>
+    <div class="etiquetas">
+      <span class="etiqueta"><span class="pin mono">▸</span> Global Operations</span>
+      <span class="etiqueta"><span class="pin mono">▸</span> Incident Resolution</span>
+      <span class="etiqueta"><span class="pin mono">▸</span> Theme Parks · Hotels · Travel</span>
+      <span class="etiqueta"><span class="pin mono">▸</span> Service Recovery</span>
+      <span class="etiqueta"><span class="pin mono">▸</span> CX</span>
+    </div>
+  </div>
+
+  <div class="contenedor stats">
+    <div class="stat"><div class="cifra">30+</div><div class="etiq">Años de experiencia</div></div>
+    <div class="stat"><div class="cifra">34</div><div class="etiq">Certificaciones</div></div>
+    <div class="stat"><div class="cifra">2</div><div class="etiq">Idiomas nativo/bilingüe</div></div>
+    <div class="stat"><div class="cifra">B2B</div><div class="etiq">Hoteles, parques y travel</div></div>
+  </div>
+
+  <div class="contenedor manifiesto">
+    <div class="etq">mi_convicción</div>
+    <p><strong>La IA no sustituye al turismo — deja al descubierto un servicio débil.</strong> La uso para hacer a los equipos más rápidos y al criterio humano más fuerte, no para ocultar problemas.</p>
+    <p>Si gestionas hoteles, parques, bedbanks, OTAs, DMCs o viajes B2B y quieres operaciones que aguanten cuando el viajero está cansado, estresado o decepcionado — <a href="#contacto">hablemos</a>.</p>
+  </div>
+</header>
+
+<section id="sobre-mi">
+  <div class="contenedor sobre-mi">
+    <h2><span class="tag mono">#</span>Sobre mí</h2>
+    <div class="linea"></div>
+    <p>Durante más de 30 años he trabajado en lo que más me gusta: <strong>crear experiencias inolvidables para las personas</strong> — primero como DJ en algunas de las discotecas más icónicas de Magaluf, y hoy en operaciones globales de turismo y parques temáticos.</p>
+    <p>Actualmente soy <strong>Theme Parks Executive – Global Operations en HBX Group (Hotelbeds)</strong>, centrado en parques temáticos y atracciones de grandes marcas globales. Conecto partners B2B, equipos internos y viajeros finales para que cada reserva, entrada e incidencia se gestione con agilidad, empatía y atención al detalle.</p>
+    <p>Mi experiencia combina:</p>
+    <ul>
+      <li><strong>Turismo y operaciones DMC</strong> (Mallorca incoming, Jet2, LMK…)</li>
+      <li><strong>Parques temáticos y atracciones</strong> (grandes parques globales)</li>
+      <li><strong>Atención al cliente y gestión de crisis</strong> (reservas complejas, incidencias de último minuto, necesidades VIP)</li>
+      <li><strong>Tecnología y herramientas</strong> (Salesforce, GCO, Excel, reporting, herramientas de IA para productividad)</li>
+    </ul>
+    <p>Soy bilingüe español/inglés, acostumbrado a trabajar con equipos y partners internacionales. Me describen como alguien que <strong>asume los problemas hasta resolverlos</strong>, aporta calma y perspectiva en situaciones de estrés, y usa los datos para mejorar procesos, no solo para seguir procedimientos.</p>
+    <div class="cita">«La gente recuerda cómo la haces sentir.» Mi pasado como DJ profesional me enseñó eso; hoy lo aplico a las operaciones de turismo: estructura y empatía para dar un servicio fiable y memorable.</div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="contenedor">
+    <h2><span class="tag mono">#</span>Experiencia</h2>
+    <div class="linea"></div>
+    <div class="timeline">
+
+      <div class="trabajo">
+        <h3>Theme Parks Executive — Global Operations <span class="actual">Actual</span></h3>
+        <div class="empresa">HBX Group (Hotelbeds) · Palma de Mallorca</div>
+        <div class="fechas">2023-03 → presente</div>
+        <ul>
+          <li>Lidero las operaciones de punta a punta para parques temáticos y atracciones en distribución B2B: disponibilidad → reserva → fulfillment → soporte post-reserva.</li>
+          <li>Responsable de la respuesta a incidentes y la higiene de escalaciones (triaje por severidad, cadencia de comunicación, alineación de stakeholders) para restaurar la estabilidad rápido.</li>
+          <li>Dirijo el gobierno de SLA con partners: estándares claros, rendición de cuentas y prevención de fallos repetidos mediante revisiones de causa raíz.</li>
+          <li>Construyo rutinas de KPI (backlog, TTR, calidad, tasa de escalación) para hacer predecible el rendimiento en picos de demanda.</li>
+          <li>Colaboración transversal con Sales, Product, Tech y Finance para mejorar la fiabilidad y proteger el resultado del cliente.</li>
+        </ul>
+      </div>
+
+      <div class="trabajo">
+        <h3>Operations Executive | Incident &amp; Emergency Management | CX Retention</h3>
+        <div class="empresa">HBX Group · Palma de Mallorca</div>
+        <div class="fechas">2022-02 → 2025</div>
+        <ul>
+          <li>Lideré la recuperación del servicio ante disrupciones (fallos de proveedores, cancelaciones, desajustes de inventario), protegiendo la experiencia del cliente y controlando la exposición financiera.</li>
+          <li>Gestioné escalaciones de alta complejidad con toma de decisiones estructurada, rigor documental y comunicación centrada en el cliente.</li>
+          <li>Investigación de mercado y análisis del comportamiento del consumidor, mejorando la entrega del servicio y las métricas de satisfacción.</li>
+          <li>Gestión de más de 40 interacciones diarias con clientes, priorizando la excelencia operativa y asegurando feedback positivo post-viaje.</li>
+          <li>Desarrollo de mejores prácticas operativas para maximizar eficiencia y velocidad en los protocolos de respuesta a emergencias.</li>
+        </ul>
+      </div>
+
+      <div class="trabajo">
+        <h3>Voluntariado de apoyo a personas con discapacidad</h3>
+        <div class="empresa">Ajuntament de Calvià · Calviá, Mallorca</div>
+        <div class="fechas">2021-06 → 2022-02</div>
+        <ul>
+          <li>Organización de talleres educativos y recreativos de apoyo a personas con discapacidad.</li>
+          <li>Facilitación de la integración comunitaria con asistencia diaria y apoyo emocional.</li>
+        </ul>
+      </div>
+
+      <div class="trabajo">
+        <h3>Jet2holidays DMC Mallorca — Especialista en Operaciones de Emergencia y Atención al Cliente</h3>
+        <div class="empresa">W2M WORLD2MEET · Mallorca</div>
+        <div class="fechas">2018-04 → 2021-03</div>
+        <ul>
+          <li>Enlace operativo principal de uno de los principales turoperadores del Reino Unido en Mallorca, con soporte en destino para miles de viajeros en un entorno DMC de gran volumen.</li>
+          <li><strong>Gestión de crisis sobre el terreno:</strong> recuperación del servicio ante disrupciones masivas de vuelos, huelgas, overbookings, incidencias de hotel y emergencias médicas.</li>
+          <li><strong>Logística de emergencia y traslados:</strong> coordinación de flotas de autocares, vehículos privados, equipos de aeropuerto, hoteles y proveedores locales.</li>
+          <li><strong>Negociación táctica:</strong> consecución de asignaciones de habitaciones y soluciones hoteleras de emergencia durante stop sales y picos de temporada.</li>
+          <li><strong>Coordinación 360° de stakeholders:</strong> enlace central entre turoperador, operaciones de vuelo, aeropuerto, hoteles, transporte y dirección DMC.</li>
+          <li><strong>Excelencia en servicio:</strong> comunicación con empatía, claridad y autoridad en situaciones de alta presión, protegiendo la experiencia de Jet2 Holidays.</li>
+        </ul>
+      </div>
+
+      <div class="trabajo">
+        <h3>Commercial Executive &amp; MICE</h3>
+        <div class="empresa">Hotel BH — Cursach Hotels Group · Calviá</div>
+        <div class="fechas">2017-07 → 2018-03</div>
+        <ul>
+          <li>Liderazgo de operaciones MICE (Meetings, Incentives, Conferences &amp; Exhibitions) garantizando alta satisfacción del cliente.</li>
+          <li>Asistencia al Director Comercial en planificación estratégica y desarrollo de negocio internacional.</li>
+          <li>Gestión de contratos con turoperadores y optimización de bases de datos de inversión.</li>
+          <li>Desarrollo de material de marketing y coordinación de viajes corporativos.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="certificaciones">
+  <div class="contenedor">
+    <h2><span class="tag mono">#</span>Certificaciones</h2>
+    <p class="sub">34 certificaciones verificables, de más reciente a más antigua. Filtra por área:</p>
+    <div class="linea"></div>
+    <div class="filtros" id="filtros">
+      <button class="filtro activo" data-tema="todas">Todas (34)</button>
+      <button class="filtro" data-tema="ia">IA / Prompt (8)</button>
+      <button class="filtro" data-tema="excel">Excel / Ofimática (8)</button>
+      <button class="filtro" data-tema="soft">Habilidades blandas (8)</button>
+      <button class="filtro" data-tema="datos">Datos / BI (3)</button>
+      <button class="filtro" data-tema="cliente">Atención al cliente (3)</button>
+      <button class="filtro" data-tema="redes">Redes / Hardware (2)</button>
+      <button class="filtro" data-tema="gestion">Gestión (1)</button>
+      <button class="filtro" data-tema="cyber">Ciberseguridad (1)</button>
+    </div>
+    <div class="grid" id="lista-cert">
+      <div class="cert" data-tema="ia"><span class="fecha">Jun 2026</span><span class="nombre">Introduction to AI-powered Image Generation</span><span class="emisor">Skillsoft</span><span class="id">ID 20319141</span></div>
+      <div class="cert" data-tema="cliente"><span class="fecha">Jun 2026</span><span class="nombre">Customer Service: Strengthening Your Service Skills</span><span class="emisor">Skillsoft</span><span class="id">ID 20194858</span></div>
+      <div class="cert" data-tema="cliente"><span class="fecha">May 2026</span><span class="nombre">Customer Service: Generating Effective Solutions</span><span class="emisor">Skillsoft</span><span class="id">ID 20096079</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">May 2026</span><span class="nombre">Getting Started with Prompt Engineering</span><span class="emisor">Skillsoft</span><span class="id">ID 20092679</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">Abr 2026</span><span class="nombre">ChatGPT &amp; Its Practical Use Cases</span><span class="emisor">Skillsoft</span><span class="id">ID 19453472</span></div>
+      <div class="cert" data-tema="datos"><span class="fecha">Mar 2026</span><span class="nombre">Data Warehouse Essential: Concepts</span><span class="emisor">Skillsoft</span><span class="id">ID 19240275</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">Feb 2026</span><span class="nombre">The Essentials for Anger Management</span><span class="emisor">Skillsoft</span><span class="id">ID 18726100</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">Feb 2026</span><span class="nombre">Receiving Feedback with an Open Mind</span><span class="emisor">Skillsoft</span><span class="id">ID 18714261</span></div>
+      <div class="cert" data-tema="gestion"><span class="fecha">Ene 2026</span><span class="nombre">Case Management</span><span class="emisor">Skillsoft</span><span class="id">ID 18050393</span></div>
+      <div class="cert" data-tema="datos"><span class="fecha">Oct 2025</span><span class="nombre">Introduction to Tableau 2023 Bootcamp: Replay 1</span><span class="emisor">Skillsoft</span><span class="id">ID 16662086</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">Ago 2025</span><span class="nombre">Harnessing the Disruption of Generative AI</span><span class="emisor">Skillsoft</span><span class="id">ID 15755079</span></div>
+      <div class="cert" data-tema="datos"><span class="fecha">Jul 2025</span><span class="nombre">Data Warehouse Essential: Architecture Frameworks &amp; Implementation</span><span class="emisor">Skillsoft</span><span class="id">ID 15649459</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">Jun 2025</span><span class="nombre">Generative AI and Its Impact to Everyday Business</span><span class="emisor">Skillsoft</span><span class="id">ID 14961139</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">Jun 2025</span><span class="nombre">Expert Insights on Difficult Conversations</span><span class="emisor">Skillsoft</span><span class="id">ID 14943341</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">Jun 2025</span><span class="nombre">AI in the Workplace</span><span class="emisor">Skillsoft</span><span class="id">ID 14942339</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">Jun 2025</span><span class="nombre">Complete Guide to Excel 365: Working With Charts &amp; Sparklines</span><span class="emisor">Skillsoft</span><span class="id">ID 14864144</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">Jun 2025</span><span class="nombre">Working with advanced charts in Excel 365 (2024)</span><span class="emisor">Skillsoft</span><span class="id">ID 14850494</span></div>
+      <div class="cert" data-tema="redes"><span class="fecha">Jun 2025</span><span class="nombre">CompTIA A+ Core 1: Cable Types and Connectors</span><span class="emisor">Skillsoft</span><span class="id">ID 14847038</span></div>
+      <div class="cert" data-tema="redes"><span class="fecha">Jun 2025</span><span class="nombre">CompTIA Network+: Cables &amp; Connectors</span><span class="emisor">Skillsoft</span><span class="id">ID 14823654</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">May 2025</span><span class="nombre">Using Basic Formulas in Excel 2019 for Windows</span><span class="emisor">Skillsoft</span><span class="id">ID 14539578</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">May 2025</span><span class="nombre">Formatting cells in Excel 365 (2023)</span><span class="emisor">Skillsoft</span><span class="id">ID 14502275</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">May 2025</span><span class="nombre">Viewing &amp; printing worksheets in Excel 365 (2023)</span><span class="emisor">Skillsoft</span><span class="id">ID 14500920</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">May 2025</span><span class="nombre">Entering data in Excel 365 (2023)</span><span class="emisor">Skillsoft</span><span class="id">ID 14499728</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">May 2025</span><span class="nombre">Getting started in Excel 365 (2023)</span><span class="emisor">Skillsoft</span><span class="id">ID 14469616</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">May 2025</span><span class="nombre">Optimizing communication &amp; information with Copilot for Microsoft 365</span><span class="emisor">Skillsoft</span><span class="id">ID 14488366</span></div>
+      <div class="cert" data-tema="ia"><span class="fecha">May 2025</span><span class="nombre">Exploring Prompt Engineering Techniques</span><span class="emisor">Skillsoft</span><span class="id">ID 14469176</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">May 2025</span><span class="nombre">Developing Personal Accountability</span><span class="emisor">Skillsoft</span><span class="id">ID 14398856</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">May 2025</span><span class="nombre">Remaining Tactful and Diplomatic under Pressure</span><span class="emisor">Skillsoft</span><span class="id">ID 14397399</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">May 2025</span><span class="nombre">Making the Most of Making Mistakes</span><span class="emisor">Skillsoft</span><span class="id">ID 14398724</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">May 2025</span><span class="nombre">Becoming a Successful Collaborator</span><span class="emisor">Skillsoft</span><span class="id">ID 14398250</span></div>
+      <div class="cert" data-tema="soft"><span class="fecha">May 2025</span><span class="nombre">Building Personal Power through Influence</span><span class="emisor">Skillsoft</span><span class="id">ID 14398046</span></div>
+      <div class="cert" data-tema="excel"><span class="fecha">Nov 2021</span><span class="nombre">Aprende Excel 2019</span><span class="emisor">LinkedIn</span><span class="id">Skill: Microsoft Excel</span></div>
+      <div class="cert" data-tema="cliente"><span class="fecha">Ene 2020</span><span class="nombre">Customer Service: Handling Abusive Customers</span><span class="emisor">LinkedIn</span><span class="id">Skill: Desescalada</span></div>
+      <div class="cert" data-tema="cyber"><span class="fecha">May 2019</span><span class="nombre">Diploma Ciberseguridad para usuarios (30 h) — Convocatoria Estatal 2018</span><span class="emisor">Emisor pendiente de verificar</span><span class="id">ID 039477</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="aptitudes">
+  <div class="contenedor">
+    <h2><span class="tag mono">#</span>Aptitudes e idiomas</h2>
+    <div class="linea"></div>
+    <div class="aptitudes">
+      <span class="apt">Global Operations</span>
+      <span class="apt">Incident &amp; Emergency Management</span>
+      <span class="apt">Escalation Management</span>
+      <span class="apt">SLA Governance</span>
+      <span class="apt">Service Recovery</span>
+      <span class="apt">KPI Routines (TTR, backlog, calidad)</span>
+      <span class="apt">Parques temáticos &amp; atracciones</span>
+      <span class="apt">Operaciones DMC / incoming</span>
+      <span class="apt">Salesforce</span>
+      <span class="apt">GCO</span>
+      <span class="apt">Microsoft Excel</span>
+      <span class="apt">Prompt Engineering / IA</span>
+      <span class="apt">Atención al cliente</span>
+      <span class="apt">Desescalada</span>
+      <span class="apt">Coordinación 360° de stakeholders</span>
+    </div>
+    <div class="idiomas">
+      <div class="idioma"><div class="bandera">🇪🇸</div><div class="nombre">Español</div><div class="nivel">Nativo o bilingüe</div></div>
+      <div class="idioma"><div class="bandera">🇬🇧</div><div class="nombre">Inglés</div><div class="nivel">Nativo o bilingüe</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="contenedor">
+    <div class="contacto">
+      <h2>¿Hablamos?</h2>
+      <p>Disponible para colaboraciones y oportunidades profesionales.</p>
+      <a class="btn" href="https://www.linkedin.com/in/francisco-javier-oliver-molina-a52ba5116/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="mailto:paco.oliver@outlook.es">paco.oliver@outlook.es</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="contenedor">
+    © <span id="anio"></span> Francisco Javier Oliver Molina · <a href="https://www.linkedin.com/in/francisco-javier-oliver-molina-a52ba5116/" target="_blank" rel="noopener">LinkedIn</a> · <a href="index-en.html">English version</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('anio').textContent = new Date().getFullYear();
+  const filtros = document.querySelectorAll('.filtro');
+  const certificados = document.querySelectorAll('#lista-cert .cert');
+  filtros.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filtros.forEach(b => b.classList.remove('activo'));
+      btn.classList.add('activo');
+      const tema = btn.dataset.tema;
+      certificados.forEach(c => {
+        c.classList.toggle('oculta', tema !== 'todas' && c.dataset.tema !== tema);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
